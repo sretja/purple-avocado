@@ -1,0 +1,352 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+publishDir: public
+dataDir: ''
+pagesDir: ''
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - examples/cara/CHANGELOG.md
+      - examples/cara/src/@lekoarts/gatsby-theme-cara/sections/intro.mdx
+      - examples/emilia/CHANGELOG.md
+      - examples/emma/CHANGELOG.md
+      - examples/graphql-playground/CHANGELOG.md
+      - >-
+        examples/graphql-playground/src/@lekoarts/gatsby-theme-graphql-playground/data/navigation.mdx
+      - examples/jodie/CHANGELOG.md
+      - examples/minimal-blog/CHANGELOG.md
+      - examples/specimens/CHANGELOG.md
+      - examples/specimens/src/pages/index.mdx
+      - examples/specimens/src/pages/preview.mdx
+      - examples/status-dashboard/CHANGELOG.md
+      - examples/styleguide/CHANGELOG.md
+      - themes/gatsby-theme-cara/CHANGELOG.md
+      - themes/gatsby-theme-cara/src/sections/about.mdx
+      - themes/gatsby-theme-cara/src/sections/contact.mdx
+      - themes/gatsby-theme-cara/src/sections/intro.mdx
+      - themes/gatsby-theme-cara/src/sections/projects.mdx
+      - themes/gatsby-theme-emilia/CHANGELOG.md
+      - themes/gatsby-theme-emilia/src/texts/about-me.mdx
+      - themes/gatsby-theme-emilia-core/CHANGELOG.md
+      - themes/gatsby-theme-emma/CHANGELOG.md
+      - themes/gatsby-theme-emma-core/CHANGELOG.md
+      - themes/gatsby-theme-graphql-playground/CHANGELOG.md
+      - themes/gatsby-theme-graphql-playground/src/data/index.mdx
+      - themes/gatsby-theme-graphql-playground/src/data/navigation.mdx
+      - themes/gatsby-theme-jodie/CHANGELOG.md
+      - themes/gatsby-theme-jodie-core/CHANGELOG.md
+      - themes/gatsby-theme-minimal-blog/CHANGELOG.md
+      - themes/gatsby-theme-minimal-blog/src/texts/bottom.mdx
+      - themes/gatsby-theme-minimal-blog/src/texts/hero.mdx
+      - themes/gatsby-theme-minimal-blog-core/CHANGELOG.md
+      - themes/gatsby-theme-specimens/CHANGELOG.md
+      - themes/gatsby-theme-status-dashboard/CHANGELOG.md
+      - themes/gatsby-theme-styleguide/CHANGELOG.md
+    fields: []
+  example:
+    type: data
+    label: Example
+    file: cypress/fixtures/example.json
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: email
+        label: Email
+      - type: string
+        name: body
+        label: Body
+  project:
+    type: page
+    label: Project
+    folder: examples/emma/content/projects
+    match: '**/*'
+    fields:
+      - type: string
+        name: client
+        label: Client
+      - type: string
+        name: title
+        label: Title
+      - type: image
+        name: cover
+        label: Cover
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: service
+        label: Service
+      - type: string
+        name: color
+        label: Color
+      - type: string
+        name: slug
+        label: Slug
+  example_1:
+    type: page
+    label: Example 1
+    folder: examples
+    match:
+      - graphql-playground/docs/aliasing.mdx
+      - graphql-playground/docs/all-modifiers-combined.mdx
+      - graphql-playground/docs/filter.mdx
+      - graphql-playground/docs/format.mdx
+      - graphql-playground/docs/fragments.mdx
+      - graphql-playground/docs/get-the-site-title.mdx
+      - graphql-playground/docs/group.mdx
+      - graphql-playground/docs/limit.mdx
+      - graphql-playground/docs/longer-query.mdx
+      - graphql-playground/docs/query-variables.mdx
+      - graphql-playground/docs/skip.mdx
+      - graphql-playground/docs/sort.mdx
+      - minimal-blog/content/pages/about/index.mdx
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: slug
+        label: Slug
+  art:
+    type: page
+    label: Art
+    folder: examples/jodie/content/pages/art
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: slug
+        label: Slug
+      - type: string
+        name: color
+        label: Color
+      - type: boolean
+        name: custom
+        label: Custom
+      - type: image
+        name: cover
+        label: Cover
+  project_1:
+    type: page
+    label: Project 1
+    folder: examples/jodie/content/projects
+    match: '**/*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: shortTitle
+        label: Short Title
+      - type: string
+        name: category
+        label: Category
+      - type: string
+        name: color
+        label: Color
+      - type: image
+        name: cover
+        label: Cover
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: slug
+        label: Slug
+  curses_and_counter_course:
+    type: page
+    label: Curses And Counter Course
+    folder: examples/minimal-blog/content/posts/curses-and-counter-courses
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: slug
+        label: Slug
+      - type: string
+        name: canonicalUrl
+        label: Canonical Url
+  post:
+    type: page
+    label: Post
+    folder: examples/minimal-blog/content/posts
+    match: '**/*'
+    exclude:
+      - curses-and-counter-courses/index.mdx
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: string
+        name: description
+        label: Description
+      - type: image
+        name: banner
+        label: Banner
+  thought:
+    type: page
+    label: Thought
+    folder: www/thoughts
+    match: '**/*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: info
+        label: Info
+  netlify:
+    type: data
+    label: Netlify
+    file: examples/status-dashboard/netlify.toml
+    fields:
+      - type: object
+        name: template
+        label: Template
+        fields:
+          - type: object
+            name: environment
+            label: Environment
+            fields:
+              - type: string
+                name: NETLIFY_ACCESS_KEY
+                label: NETLIFY ACCESS KEY
+              - type: string
+                name: CIRCLECI_KEY
+                label: CIRCLECI KEY
+              - type: string
+                name: SITE_TITLE
+                label: SITE TITLE
+              - type: string
+                name: SITE_URL
+                label: SITE URL
+              - type: string
+                name: SITE_DESCRIPTION
+                label: SITE DESCRIPTION
+  data_1:
+    type: data
+    label: Data 1
+    folder: ''
+    fields:
+      - type: string
+        name: extends
+        label: Extends
+      - type: object
+        name: compilerOptions
+        label: Compiler Options
+        fields:
+          - type: string
+            name: outDir
+            label: Out Dir
+          - type: string
+            name: baseUrl
+            label: Base Url
+          - type: string
+            name: module
+            label: Module
+          - type: boolean
+            name: removeComments
+            label: Remove Comments
+          - type: boolean
+            name: strict
+            label: Strict
+          - type: boolean
+            name: sourceMap
+            label: Source Map
+          - type: boolean
+            name: skipLibCheck
+            label: Skip Lib Check
+          - type: string
+            name: target
+            label: Target
+          - type: list
+            name: lib
+            label: Lib
+            items:
+              type: string
+          - type: list
+            name: types
+            label: Types
+            items:
+              type: string
+      - type: list
+        name: include
+        label: Include
+        items:
+          type: string
+  themes:
+    type: data
+    label: Themes
+    file: www/data/themes.yaml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: title
+          label: Title
+        - type: string
+          name: url
+          label: Url
+        - type: string
+          name: preview
+          label: Preview
+        - type: string
+          name: description
+          label: Description
+        - type: image
+          name: image
+          label: Image
+        - type: list
+          name: shapes
+          label: Shapes
+          items:
+            type: object
+            fields:
+              - type: string
+                name: type
+                label: Type
+              - type: string
+                name: color
+                label: Color
+              - type: list
+                name: size
+                label: Size
+                items:
+                  type: string
+              - type: list
+                name: xOffset
+                label: X Offset
+                items:
+                  type: string
+              - type: list
+                name: yOffset
+                label: Y Offset
+                items:
+                  type: string
+              - type: number
+                name: opacity
+                label: Opacity
+                subtype: float
